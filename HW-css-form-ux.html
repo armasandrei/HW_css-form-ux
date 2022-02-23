@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS  | UX Form</title>
+
+    <style>
+       .payment-form{
+           border: 1px solid #555;
+           padding: 20px 10px;
+           font-family: arial;
+           width: 514px;
+           margin: 50px auto;
+           background-image: url(visa_mastercard.png);
+           background-size: 400px;
+           background-repeat: no-repeat;
+           border-radius: 5px;
+
+       }
+       .payment-form h2{
+           margin-bottom: 200px;
+       }
+       .payment-form label{
+           display: inline-block;
+           margin: 15px 0;
+       }
+       .payment-form label:nth-child(2),
+       .payment-form label:nth-child(3)
+       {
+           display: block;
+       }
+       .payment-form input{
+           border: 1px solid #AAA;
+           outline: none;
+
+       }
+       .payment-form input:focus{
+           border-color: #0774cb;
+
+       }
+       .payment-form input:valid{
+           
+        border-color: green;
+
+       }
+       .payment-form input:invalid{
+           border-color: red;
+
+       }
+
+       .payment-form input:hover{
+           border-color: #2e67a8;
+
+       }
+
+       .payment-form p{
+           color: red;
+           text-align: right;
+           padding-right: 10px;
+           margin-top: 5px;
+           display: none;
+       }
+
+       .payment-form input:invalid+p{
+           display: block;
+
+       }
+       .payment-form strong{
+           color: red;
+           text-align: right;
+           padding-right: 10px;
+           margin-top: 5px;
+           display: none;
+       }
+
+       .payment-form input:invalid+strong{
+           display: block;
+
+       }
+
+       .payment-form input,
+       .payment-form button{
+        padding: 10px 20px;  
+        font-size: 25px;
+         border-radius: 5px;
+       }
+        .payment-form button:hover{
+            box-shadow: 0 0 3px 1px black;
+            cursor: pointer;
+        }
+        .payment-form label:nth-child(5){
+            float: right;
+        }
+
+      .payment-form button{
+          display: block;
+          width: 100%;
+          border: none;
+          border-radius: 10px;
+          background-color: #0774cb;
+          color: white;
+      }
+    </style>
+</head>
+
+<body>
+    <form class="payment-form" action="paypall.com/payment/gateway">
+       <h2>Payment Details</h2>
+
+      <label >
+           
+            
+             <input type="text"
+             size="30"
+             placeholder="card number"
+             pattern="\d{4}-\d{4}-\d{4}-\d{4}"
+             required >
+             <p>the card number should formatted like xxxx-xxxx-xxxx-xxxx</p>
+
+      </label>
+     
+      <label >
+       
+            
+             <input type="text"
+             size="30"
+             placeholder="owner name"
+              pattern="[A-Za-z]{2,}\s[A-Za-z]{2,}"
+             required >
+            <p>Your Name 2 words like: "Name Surname" </p>
+
+      </label>
+     
+      <label >
+          
+            
+             <input type="text"
+             size="5"
+             placeholder="expires"
+              pattern="[0-9]{2}/[0-9]{2}"
+             required   >
+            <p> DATE: MM/DD </p>
+           
+
+      </label>
+      
+      <label >
+            
+             
+             <input type="text"
+             size="3"
+             placeholder=" code"
+             pattern="[0-9]{3}"
+             required >
+             <strong> CVV2/CODE: 123 </strong>
+         
+
+      </label>
+     
+
+     <button>
+         PAY NOW !!!
+     </button>
+
+
+    </form>
+
+    
+</body>
+</html>
